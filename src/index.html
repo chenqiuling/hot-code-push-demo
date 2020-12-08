@@ -28,7 +28,80 @@
   </script>-->
 
   <link href="build/main.css" rel="stylesheet">
+  <script>
+    var app = {
 
+      // Application Constructor
+      initialize: function() {
+        this.bindEvents();
+      },
+
+      // Bind any events that are required.
+      // Usually you should subscribe on 'deviceready' event to know, when you can start calling cordova modules
+      bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('chcp_updateIsReadyToInstall', this.chcp_updateIsReadyToInstall, false);
+        document.addEventListener('chcp_updateLoadFailed', this.chcp_updateLoadFailed, false);
+        document.addEventListener('chcp_nothingToUpdate', this.chcp_nothingToUpdate, false);
+        document.addEventListener('chcp_beforeInstall', this.chcp_beforeInstall, false);
+        document.addEventListener('chcp_updateInstalled', this.chcp_updateInstalled, false);
+        document.addEventListener('chcp_updateInstallFailed', this.chcp_updateInstallFailed, false);
+        document.addEventListener('chcp_nothingToInstall', this.chcp_nothingToInstall, false);
+        document.addEventListener('chcp_beforeAssetsInstalledOnExternalStorage', this.chcp_beforeAssetsInstalledOnExternalStorage, false);
+        document.addEventListener('chcp_assetsInstalledOnExternalStorage', this.chcp_assetsInstalledOnExternalStorage, false);
+        document.addEventListener('chcp_assetsInstallationError', this.chcp_assetsInstallationError, false);
+      },
+
+      // deviceready Event Handler
+      onDeviceReady: function() {
+        console.log('Device is ready for work');
+      },
+
+      // chcp_updateIsReadyToInstall Event Handler
+      chcp_updateIsReadyToInstall: function() {
+        alert('1chcp_updateIsReadyToInstall');
+        console.log('Update is ready for installation');
+      },
+      chcp_updateLoadFailed: function() {
+        alert('2chcp_updateLoadFailed');
+        console.log('Update is ready for installation');
+      },
+      chcp_nothingToUpdate: function() {
+        alert('3chcp_nothingToUpdate');
+        console.log('Update is ready for installation');
+      },
+      chcp_beforeInstall: function() {
+        alert('4chcp_beforeInstall');
+        console.log('Update is ready for installation');
+      },
+      chcp_updateInstalled: function() {
+        alert('5chcp_updateInstalled');
+        console.log('Update is ready for installation');
+      },
+      chcp_updateInstallFailed: function() {
+        alert('6chcp_updateInstallFailed');
+        console.log('Update is ready for installation');
+      },
+      chcp_nothingToInstall: function() {
+        alert('7chcp_nothingToInstall');
+        console.log('Update is ready for installation');
+      },
+      chcp_beforeAssetsInstalledOnExternalStorage: function() {
+        alert('8chcp_beforeAssetsInstalledOnExternalStorage');
+        console.log('Update is ready for installation');
+      },
+      chcp_assetsInstalledOnExternalStorage: function() {
+        alert('9chcp_assetsInstalledOnExternalStorage');
+        console.log('Update is ready for installation');
+      },
+      chcp_assetsInstallationError: function() {
+        alert('10chcp_assetsInstallationError');
+        console.log('Update is ready for installation');
+      },
+    };
+
+    app.initialize();
+  </script>
 </head>
 <body>
 

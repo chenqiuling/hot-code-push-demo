@@ -1,0 +1,7 @@
+{
+  "name": "hot-code-push-demo",
+  "ios_identifier": "",
+  "android_identifier": "",
+  "update": "resume",
+  "content_url": "http://10.39.229.186:8090/www/chcp.json"
+}
